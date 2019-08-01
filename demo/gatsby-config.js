@@ -10,7 +10,7 @@ module.exports = {
     // Used for the site title and SEO
     title: `Demo Blog`,
     // Used to provide alt text for your avatar
-    author: `siddharthkp`,
+    author: `Sid`,
     // Used for SEO
     description: `My demo blog`,
   },

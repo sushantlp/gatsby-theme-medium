@@ -30,12 +30,18 @@ const Bio = ({ date }) => {
             mr: 2,
             mb: 0,
             width: 48,
-            borderRadius: 99999
+            borderRadius: 99999,
+            border: "2px solid #17bf63"
           })}
         />
       ) : null}
 
-      <BioContent date={date} author={author} />
+      <div>
+        <BioContent author={author} />
+        <div css={css({ fontSize: 0, color: "muted", lineHeight: 1 })}>
+          {date}
+        </div>
+      </div>
     </Flex>
   );
 };
