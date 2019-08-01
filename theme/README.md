@@ -1,51 +1,83 @@
-# Gatsby Theme Jam Example Submission
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  The Gatsby blog theme
+</h1>
 
-This is a bare-bones Gatsby theme to showcase how a [Theme Jam](https://themejam.gatsbyjs.org) submission should look.
-
-See the [live demo](https://gatsby-theme-jam-example.netlify.com)
+A Gatsby theme for creating a blog.
 
 ## Installation
 
-To use this theme in your Gatsby sites, follow these instructions:
+### Use the blog theme starter
 
-1.  Install the theme
-    ```sh
-    npm install --save gatsby-theme-jam-example
-    ```
+This will generate a new site that pre-configures use of the blog theme.
 
-2.  Add the theme to your `gatsby-config.js`:
-    ```js
-    module.exports = {
-      plugins: [
-        'gatsby-theme-jam-example'
-      ]
-    }
-    ```
+```sh
+gatsby new my-themed-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
+```
 
-3.  Start your site
-    ```sh
-    gatsby develop
-    ```
+### Manually add to your site
 
-## Submission Checklist
+```sh
+npm install --save gatsby-theme-blog
+```
 
-To ensure your Theme Jam submission [follows the rules](https://themejam.gatsbyjs.org/rules), use this checklist:
+## Usage
 
-- [ ] Use our [accessibility guide][a11y] to ensure your site meets our accessibility standards
-- [ ] Run a performance audit using [Lighthouse][] and/or [WebPageTest][]
-- [ ] Set up a live demo using [Netlify][] or [GitHub Pages][]
-- [ ] Add installation documentation to the README
-- [ ] Update the `name` field in `package.json`
-- [ ] Update the `author` field in `package.json`
-- [ ] Update the `repository` field in `package.json`
-- [ ] Make sure the theme’s `keywords` in `package.json` include `gatsby`, `gatsby-theme`, and `gatsby-plugin`
-- [ ] Publish your theme to npm ([docs][npmpublish])
-- [ ] Submit your theme at https://themejam.gatsbyjs.org
+### Theme options
 
-[a11y]: https://gatsbyjs.org/docs/making-your-site-accessible#how-to-improve-accessibility
-[Lighthouse]: https://developers.google.com/web/tools/lighthouse/
-[axe]: https://www.deque.com/axe/
-[WebPageTest]: http://webpagetest.org/
-[Netlify]: https://netlify.com
-[GitHub Pages]: https://pages.github.com/
-[npmpublish]: https://docs.npmjs.com/cli/publish
+| Key           | Default value    | Description                                                                                               |
+| ------------- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+| `basePath`    | `/`              | Root url for all blog posts                                                                               |
+| `contentPath` | `content/posts`  | Location of blog posts                                                                                    |
+| `assetPath`   | `content/assets` | Location of assets                                                                                        |
+| `mdx`         | `true`           | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
+
+#### Example usage
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/blog`,
+      },
+    },
+  ],
+}
+```
+
+### Additional configuration
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the site title and SEO
+    title: `My Blog Title`,
+    // Used to provide alt text for your avatar
+    author: `My Name`,
+    // Used for SEO
+    description: `My site description...`,
+    // Used for social links in the root footer
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/gatsbyjs`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/gatsbyjs`,
+      },
+    ],
+  },
+}
+```
