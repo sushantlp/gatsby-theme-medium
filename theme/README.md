@@ -4,25 +4,15 @@
   </a>
 </p>
 <h1 align="center">
-  The Gatsby blog theme
+  Gatsby Theme Medium
 </h1>
 
-A Gatsby theme for creating a blog.
+When you like the style, but not the company.
 
 ## Installation
 
-### Use the blog theme starter
-
-This will generate a new site that pre-configures use of the blog theme.
-
 ```sh
-gatsby new my-themed-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
-```
-
-### Manually add to your site
-
-```sh
-npm install --save gatsby-theme-blog
+npm install --save gatsby-theme-medium
 ```
 
 ## Usage
@@ -43,14 +33,14 @@ npm install --save gatsby-theme-blog
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
+      resolve: `gatsby-theme-medium`,
       options: {
         // basePath defaults to `/`
-        basePath: `/blog`,
-      },
-    },
-  ],
-}
+        basePath: `/blog`
+      }
+    }
+  ]
+};
 ```
 
 ### Additional configuration
@@ -71,13 +61,13 @@ module.exports = {
     social: [
       {
         name: `Twitter`,
-        url: `https://twitter.com/gatsbyjs`,
+        url: `https://twitter.com/gatsbyjs`
       },
       {
         name: `GitHub`,
-        url: `https://github.com/gatsbyjs`,
-      },
-    ],
-  },
-}
+        url: `https://github.com/gatsbyjs`
+      }
+    ]
+  }
+};
 ```

@@ -1,18 +1,18 @@
-import React from "react"
-import { Link } from "gatsby"
-import { css, Styled, Flex } from "theme-ui"
+import React from "react";
+import { Link } from "gatsby";
+import { css, Styled, Flex } from "theme-ui";
 
-import Bio from "../components/bio"
+import Bio from "../components/bio";
 
 const Footer = ({ previous, next }) => (
   <footer
     css={css({
       mt: 4,
-      pt: 3,
+      pt: 3
     })}
   >
     <Styled.hr />
-    <Bio />
+
     {(previous || next) && (
       <Flex
         as="ul"
@@ -20,7 +20,7 @@ const Footer = ({ previous, next }) => (
           flexWrap: `wrap`,
           justifyContent: `space-between`,
           listStyle: `none`,
-          padding: 0,
+          padding: 0
         }}
       >
         <li>
@@ -40,6 +40,6 @@ const Footer = ({ previous, next }) => (
       </Flex>
     )}
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

@@ -1,22 +1,21 @@
 {
-  "name": "gatsby-theme-jam-example",
-  "version": "0.0.11",
-  "description": "A Gatsby theme for miscellaneous blogging with a dark/light mode",
+  "name": "gatsby-theme-medium",
+  "version": "0.0.1",
+  "description": "A Gatsby theme that looks like Medium",
   "main": "index.js",
   "keywords": [
     "gatsby",
     "gatsby-theme",
     "gatsby-plugin",
     "react",
-    "blog"
+    "blog",
+    "medium"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby.git",
-    "directory": "themes/gatsby-theme-blog"
+    "url": "https://github.com/siddharthkp/gatsby-theme-medium.git"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/themes/gatsby-theme-blog#readme",
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@mdx-js/mdx": "^1.1.1",
@@ -43,8 +42,9 @@
     "react-switch": "^5.0.1",
     "remark-slug": "^5.1.2",
     "theme-ui": "^0.2.23",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
+    "typeface-lato": "^0.0.75",
+    "typeface-lora": "^0.0.72",
+    "typeface-playfair-display": "^0.0.72",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {

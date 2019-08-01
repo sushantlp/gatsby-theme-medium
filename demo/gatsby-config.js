@@ -5,5 +5,13 @@
  */
 
 module.exports = {
-  plugins: ["gatsby-theme-jam-example"],
+  plugins: ["gatsby-theme-medium"],
+  siteMetadata: {
+    // Used for the site title and SEO
+    title: `Demo Blog`,
+    // Used to provide alt text for your avatar
+    author: `siddharthkp`,
+    // Used for SEO
+    description: `My demo blog`,
+  },
 }

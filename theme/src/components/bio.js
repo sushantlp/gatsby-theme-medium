@@ -5,20 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import { Styled, css, Flex } from "theme-ui"
-import BioContent from "./bio-content.js"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
+import { Styled, css, Flex } from "theme-ui";
+import BioContent from "./bio-content.js";
 
-const Bio = () => {
-  const data = useStaticQuery(bioQuery)
+const Bio = ({ date }) => {
+  const data = useStaticQuery(bioQuery);
   const {
     site: {
-      siteMetadata: { author },
+      siteMetadata: { author }
     },
-    avatar,
-  } = data
+    avatar
+  } = data;
 
   return (
     <Flex css={css({ mb: 4 })}>
@@ -30,26 +30,15 @@ const Bio = () => {
             mr: 2,
             mb: 0,
             width: 48,
-            borderRadius: 99999,
+            borderRadius: 99999
           })}
         />
-      ) : (
-        <div
-          css={css({
-            mr: 2,
-            mb: 0,
-            width: 48,
-            borderRadius: 99999,
-          })}
-          role="presentation"
-        />
-      )}
-      <Styled.div>
-        <BioContent />
-      </Styled.div>
+      ) : null}
+
+      <BioContent date={date} author={author} />
     </Flex>
-  )
-}
+  );
+};
 
 const bioQuery = graphql`
   query BioQuery {
@@ -66,6 +55,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;

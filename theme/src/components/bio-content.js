@@ -1,14 +1,14 @@
-import React, { Fragment } from "react"
-import { Styled } from "theme-ui"
+import React, { Fragment } from "react";
+import { Styled } from "theme-ui";
 
 /**
  * Shadow me to add your own bio content
  */
 
-export default () => (
+export default ({ author, date }) => (
   <Fragment>
-    Words by <Styled.a href="http://example.com/">Jane Doe</Styled.a>.
+    {author}
     <br />
-    Change me. This is all quite default.
+    {date}
   </Fragment>
-)
+);

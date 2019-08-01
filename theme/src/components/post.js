@@ -1,21 +1,21 @@
-import React from "react"
-import { Styled, css } from "theme-ui"
-
-import PostFooter from "../components/post-footer"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react";
+import { Styled, css } from "theme-ui";
+import Bio from "../components/bio";
+import PostFooter from "../components/post-footer";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const Post = ({
   data: {
     post,
     site: {
-      siteMetadata: { title },
-    },
+      siteMetadata: { title }
+    }
   },
   location,
   previous,
-  next,
+  next
 }) => (
   <Layout location={location} title={title}>
     <SEO title={post.title} description={post.excerpt} />
@@ -24,16 +24,15 @@ const Post = ({
       <Styled.p
         css={css({
           fontSize: 1,
-          mt: -3,
-          mb: 3,
+          mb: 3
         })}
       >
-        {post.date}
+        <Bio date={post.date} />
       </Styled.p>
       <MDXRenderer>{post.body}</MDXRenderer>
     </main>
     <PostFooter {...{ previous, next }} />
   </Layout>
-)
+);
 
-export default Post
+export default Post;

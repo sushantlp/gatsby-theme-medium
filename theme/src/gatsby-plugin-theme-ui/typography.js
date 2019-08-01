@@ -1,6 +1,7 @@
-import "typeface-montserrat"
-import "typeface-merriweather"
-import { toTheme } from "@theme-ui/typography"
-import wordpress2016 from "typography-theme-wordpress-2016"
+import "typeface-playfair-display";
+import "typeface-lato";
 
-export default toTheme(wordpress2016)
+import { toTheme } from "@theme-ui/typography";
+import wordpress2016 from "typography-theme-wordpress-2016";
+
+export default toTheme(wordpress2016);
